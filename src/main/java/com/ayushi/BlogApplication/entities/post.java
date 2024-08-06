@@ -12,7 +12,7 @@ public class Post {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int postId;
+	private Integer postId;
 	private String postTitle;
 	private String postContent;
 	private Date postDate;
