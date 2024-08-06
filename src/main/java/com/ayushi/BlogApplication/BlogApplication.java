@@ -1,4 +1,4 @@
-package com.ayushi.BlogApp;
+package com.ayushi.BlogApplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
