@@ -10,9 +10,9 @@ import com.ayushi.BlogApplication.payloads.PostDto;
 public interface PostService {
 	
 	PostDto createPost(PostDto postDto);
-	PostDto updatePost(PostDto postDto, int postId);
-	PostDto getPostById(int postId);
+	PostDto updatePost(PostDto postDto, Integer postId);
+	PostDto getPostById(Integer postId);
 	List<PostDto> getAllPosts();
-	void deletePost(int postId);
+	void deletePost(Integer postId);
 
 }

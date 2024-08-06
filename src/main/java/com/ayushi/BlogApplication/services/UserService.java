@@ -10,9 +10,9 @@ import com.ayushi.BlogApplication.payloads.UserDto;
 public interface UserService {
 	
 	UserDto createUser(UserDto userDto);
-	UserDto updateUser(UserDto userDto, int userId);
-	UserDto getUserById(int userId);
+	UserDto updateUser(UserDto userDto, Integer userId);
+	UserDto getUserById(Integer userId);
 	List<UserDto> getAllUsers();
-	void deleteUser(int userId);
+	void deleteUser(Integer userId);
 
 }

@@ -10,8 +10,8 @@ import com.ayushi.BlogApplication.payloads.CategoryDto;
 public interface CategoryService {
 	
 	CategoryDto createCategory(CategoryDto categoryDto);
-	CategoryDto updateCategoryDto(CategoryDto categoryDto, int categoryId);
-	CategoryDto getCategoryById(int categoryId);
+	CategoryDto updateCategoryDto(CategoryDto categoryDto, Integer categoryId);
+	CategoryDto getCategoryById(Integer categoryId);
 	List<CategoryDto> getAllCategories();
-	void deleteCategory(int categoryId);
+	void deleteCategory(Integer categoryId);
 }
