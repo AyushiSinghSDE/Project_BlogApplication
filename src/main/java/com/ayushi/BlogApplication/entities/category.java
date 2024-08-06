@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class category {
+public class Category {
 	
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
