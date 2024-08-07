@@ -24,7 +24,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	@PostMapping("/create")
+	@PostMapping("/")
 	public ResponseEntity<UserDto> createuser(@RequestBody UserDto userDto)
 	{
 		UserDto createdUserDto= userService.createUser(userDto);
@@ -32,7 +32,7 @@ public class UserController {
 	}
 	
 	
-	@PutMapping("/update/{userid}")
+	@PutMapping("/{userid}")
 	public ResponseEntity<UserDto> updateuser(@RequestBody UserDto userDto, @PathVariable Integer userId)
 	{
 		UserDto updateUserDto= userService.updateUser(userDto, userId);
@@ -40,7 +40,7 @@ public class UserController {
 	}
 	
 	
-	@GetMapping("/show/{userId}")
+	@GetMapping("/{userId}")
 	public ResponseEntity<UserDto> getUserById(@PathVariable Integer userId)
 	{
 		UserDto userDto= userService.getUserById(userId);
@@ -48,7 +48,7 @@ public class UserController {
 	}
 	
 	
-	@GetMapping("/show/all")
+	@GetMapping("/")
 	public ResponseEntity<List<UserDto>> getAllusers()
 	{
 		List<UserDto> userDtos= userService.getAllUsers();
@@ -56,7 +56,7 @@ public class UserController {
 	}
 	
 	
-	@DeleteMapping("/delete/{userId}")
+	@DeleteMapping("/{userId}")
 	public ResponseEntity<Void> deleteUser(@PathVariable Integer userId)
 	{
 		userService.deleteUser(userId);
