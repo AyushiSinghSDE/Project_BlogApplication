@@ -46,7 +46,7 @@ public class PostServiceImple implements PostService{
 		newPost.setPostDate(new Date());
 		newPost.setUser(newUser);
 		newPost.setCategory(newCategory);
-		Post createdPost= postRepo.save(newPost);
+		Post createdPost= this.postRepo.save(newPost);
 		
 		return this.modelMapper.map(createdPost, PostDto.class);
 	}
@@ -113,7 +113,7 @@ public class PostServiceImple implements PostService{
 	@Override
 	public List<PostDto> searchByTitle(String keyword) {
 		
-		List<Post> posts= postRepo.findPostTitleContaining(keyword);
+		List<Post> posts= postRepo.findByPostTitleContaining(keyword);
 		List<PostDto>postDtos=posts.stream().map((post)->this.modelMapper.map(post, PostDto.class)).collect(Collectors.toList());
 		return postDtos;
 	}

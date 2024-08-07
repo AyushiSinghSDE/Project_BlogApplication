@@ -32,7 +32,7 @@ public class UserController {
 	}
 	
 	
-	@PutMapping("/{userid}")
+	@PutMapping("/{userId}")
 	public ResponseEntity<UserDto> updateuser(@RequestBody UserDto userDto, @PathVariable Integer userId)
 	{
 		UserDto updateUserDto= userService.updateUser(userDto, userId);

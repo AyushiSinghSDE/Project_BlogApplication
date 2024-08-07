@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.ayushi.BlogApplication.payloads.CategoryDto;
 
-@Service
 public interface CategoryService {
 	
 	CategoryDto createCategory(CategoryDto categoryDto);
