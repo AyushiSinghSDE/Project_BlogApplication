@@ -49,6 +49,30 @@ public class PostController {
 	}
 	
 	
+	
+	@GetMapping("/category/{categoryId}")
+	public ResponseEntity<List<PostDto>> getPostByCategory(@PathVariable Integer categoryId)
+	{
+		List<PostDto> newpPostDtos= postService.getPostByCategory(categoryId);
+		return new ResponseEntity<List<PostDto>>(newpPostDtos, HttpStatus.OK);
+	}
+	
+	
+	@GetMapping("/user/{userId}")
+	public ResponseEntity<List<PostDto>> getPostByUser(@PathVariable Integer userId)
+	{
+		List<PostDto> newpPostDtos= postService.getPostByuser(userId);
+		return new ResponseEntity<List<PostDto>>(newpPostDtos, HttpStatus.OK);
+	}
+	
+	
+	@GetMapping("/search/{keyword}")
+	public ResponseEntity<List<PostDto>> searchPostByKeyword(@PathVariable String keyword)
+	{
+		List<PostDto> newPostDtos= postService.searchByTitle(keyword);
+		return new ResponseEntity<List<PostDto>>(newPostDtos,HttpStatus.OK);
+	}
+	
 	@GetMapping("/")
 	public ResponseEntity<List<PostDto>> getAllPost()
 	{
